@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/form_pedido_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza de Frango"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_toLeftOf="@+id/form_pedido_valor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/form_pedido_valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 8,00"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_above="@+id/form_pedido_descricao"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/form_pedido_descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aqui será a descrição do produto a ser incluido no pedido"
+            android:layout_below="@id/form_pedido_titulo"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+
+        <TextView
+            android:id="@+id/form_pedido_quantidade"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/form_pedido_descricao"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="1"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/form_pedido_btn_soma"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/form_pedido_quantidade"
+            android:layout_toEndOf="@+id/form_pedido_quantidade"
+            android:layout_toRightOf="@+id/form_pedido_quantidade"
+            android:text="+"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <Button
+            android:id="@+id/form_pedido_btn_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/form_pedido_quantidade"
+            android:layout_toLeftOf="@+id/form_pedido_quantidade"
+            android:layout_toStartOf="@+id/form_pedido_quantidade"
+            android:text="-"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <EditText
+            android:hint="Observações"
+            android:id="@+id/form_pedido_obs"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/form_pedido_quantidade"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+            android:id="@+id/form_pedido_valor_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/form_pedido_obs"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="40dp"
+            android:text="R$ 8,00"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+        <TextView
+            android:id="@+id/valorTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/form_pedido_valor_total"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="Valor Total"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.qgdostark.comandroid.activity.ListaProdutosActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/lista_pedido_txt_total_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Valor dos produtos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/lista_pedido_valor_total_produtos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="R$ 30,00 "
+            android:gravity="center"
+            android:layout_below="@+id/lista_pedido_txt_total_produtos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            />
+
+
+    <!-- A RecyclerView generico, pode ser usado para varias listas-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_generico"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/lista_pedido_valor_total_produtos"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/lista_pedidos_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/plus" />
+
+
+</android.support.design.widget.CoordinatorLayout>

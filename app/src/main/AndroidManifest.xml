@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.qgdostark.comandroid">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/restaurante"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ListaProdutosActivity"/>
+        <activity android:name=".activity.FormPedidoActivity" />
+        <activity android:name=".activity.CadastroProdutoActivity" />
+        <activity android:name=".activity.CategoriaActivity" />
+        <activity android:name=".activity.SobreActivity" />
+        <activity android:name=".activity.ListaPedidosActivity" />
+        <activity android:name=".activity.CaixaActivity" />
+        <activity android:name=".activity.RelatoriosActivity"></activity>
+    </application>
+
+</manifest>
